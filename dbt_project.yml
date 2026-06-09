@@ -1,0 +1,22 @@
+name: 'retail_demo'
+version: '0.1.0'
+config-version: 2
+
+profile: 'retail_demo'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retail_demo:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

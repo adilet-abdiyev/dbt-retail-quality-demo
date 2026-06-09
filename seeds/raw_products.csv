@@ -1,0 +1,13 @@
+product_id,product_name,category,unit_price
+1,Whole Milk 1L,dairy,1.40
+2,Butter 200g,dairy,2.80
+3,Greek Yogurt 500g,dairy,2.10
+4,Sourdough Loaf,bakery,3.20
+5,Croissant,bakery,1.10
+6,Bananas 1kg,produce,1.60
+7,Tomatoes 1kg,produce,2.40
+8,Cucumbers 1kg,produce,1.90
+9,Apples 1kg,produce,2.20
+10,Orange Juice 1L,beverages,2.50
+11,Sparkling Water 1.5L,beverages,0.90
+12,Ground Coffee 250g,beverages,5.40

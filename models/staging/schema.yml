@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: stg_sales
+    description: >
+      Cleaned sales lines: deduped by sale_id, negative quantities dropped,
+      line amount computed.
+    columns:
+      - name: sale_id
+        tests:
+          - unique
+          - not_null
+      - name: quantity
+        tests:
+          - non_negative
+      - name: amount
+        tests:
+          - non_negative
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: store_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_stores')
+              field: store_id
+
+  - name: stg_products
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+      - name: category
+        tests:
+          - accepted_values:
+              values: ['dairy', 'bakery', 'produce', 'beverages']
+
+  - name: stg_stores
+    columns:
+      - name: store_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,8 @@
+# Local DuckDB warehouse — no credentials needed, safe to keep in the repo.
+retail_demo:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: retail_demo.duckdb
+      threads: 4

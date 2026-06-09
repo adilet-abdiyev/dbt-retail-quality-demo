@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fct_sales_daily
+    description: "Daily sales by store and product. Grain: (sale_date, store_id, product_id)."
+    columns:
+      - name: units
+        tests:
+          - non_negative
+      - name: revenue
+        tests:
+          - non_negative
+
+  - name: dim_products
+    description: SCD-2 product dimension; one row per product version.
+    columns:
+      - name: product_id
+        tests:
+          - not_null
