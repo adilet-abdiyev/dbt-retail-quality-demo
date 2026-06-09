@@ -1,6 +1,6 @@
 # dbt retail demo: marts, SCD-2, and data-quality checks
 
-A small, self-contained dbt project I built to show how I work with the transformation layer. It mirrors the patterns I use at my job (dbt models with tests, SCD-2 snapshots, parity audits), rebuilt from scratch on synthetic data. Nothing here is my employer's code or data.
+A small, self-contained dbt project I built to show how I work with the transformation layer. It mirrors the patterns I use at my job (dbt models with tests, SCD-2 snapshots, parity audits), rebuilt from scratch on synthetic data.
 
 ## What it shows
 
